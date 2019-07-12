@@ -1,0 +1,52 @@
+@charset "utf8";
+
+/* 
+*  一般情況下, 所有頁面的根樣式都會寫在這裡面 base.css or Common.css
+*/
+
+body,
+div,
+p,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* 需要對圖片 fileset邊框清零 */
+
+img,
+fieldset {
+    border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* 樣式重置 因不同瀏覽器默認樣式不同 */

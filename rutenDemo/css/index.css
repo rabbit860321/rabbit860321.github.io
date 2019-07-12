@@ -1,0 +1,390 @@
+@charset "utf-8";
+body {
+    font: 12px/12px "微軟正黑體";
+}
+
+.header {
+    height: 136px;
+}
+
+
+/* S header白色部分 */
+
+.header .w-header {
+    height: 35px;
+    background-color: #eeeeee;
+}
+
+.w-header .w-header-wrap {
+    width: 1250px;
+    height: 35px;
+    margin: 0 auto;
+}
+
+.w-header-wrap .w-header-left {
+    margin-left: 10px;
+}
+
+.w-header-wrap .w-header-right {
+    margin-right: 10px;
+}
+
+.w-header-wrap .w-header-right {
+    float: right;
+}
+
+.w-header-wrap .w-header-left {
+    float: left;
+}
+
+.w-header-left li,
+.w-header-right li {
+    float: left;
+    line-height: 35px;
+    margin-right: 35px;
+}
+
+.w-header-left li a,
+.w-header-right li a {
+    color: #545454;
+}
+
+.w-header-left li a:hover,
+.w-header-right li a:hover {
+    text-decoration-line: underline;
+}
+
+
+/* E header白色部分 */
+
+
+/* S header橘色部分 */
+
+.header .o-header {
+    height: 101px;
+    background-color: #f19200;
+}
+
+.o-header .o-header-wrap {
+    width: 1250px;
+    height: 87px;
+    margin: 0 auto;
+    padding-top: 14px;
+}
+
+
+/* S LOGO部分 */
+
+.o-header-wrap .logo {
+    width: 143px;
+    height: 78px;
+    float: left;
+}
+
+.logo h1 {
+    position: absolute;
+    text-indent: -99999px;
+}
+
+.logo a {
+    display: inline-block;
+    width: 100px;
+    height: 45px;
+    margin-left: 26px;
+    margin-bottom: 15px;
+}
+
+.logo .logo-item {
+    width: 116px;
+    height: 20px;
+    padding-left: 27px;
+    line-height: 20px;
+    color: white;
+    background: url(../img/images/臉.png) no-repeat;
+}
+
+
+/* E LOGO部分 */
+
+
+/* S 搜索框 */
+
+.o-header-wrap .search {
+    width: 725px;
+    height: 77px;
+    margin-left: 204px;
+    position: relative;
+}
+
+.search input {
+    width: 725px;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 1em;
+    margin-bottom: 14px;
+    border: none;
+}
+
+.search .hot li {
+    float: left;
+}
+
+.search .hot li a {
+    color: white;
+    margin-right: 15px;
+}
+
+.search .hot li a:hover {
+    text-decoration-line: underline;
+}
+
+.search .sel {
+    position: absolute;
+    width: 107px;
+    height: 36px;
+    border: none;
+    background-color: #f5f5f5;
+    font-size: 15px;
+    line-height: 36px;
+    padding-left: 5px;
+    left: 572px;
+    top: 6px;
+}
+
+.search .searchbtn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: 690px;
+    background: url(../img/images/放大鏡.jpg);
+}
+
+
+/* E 搜索框 */
+
+
+/* S 用戶列表 */
+
+.user {
+    width: 265px;
+    height: 53px;
+    float: right;
+}
+
+.user .user-item li {
+    width: 66.25px;
+    height: 53px;
+    float: left;
+    position: relative;
+}
+
+.user .user-item li a {
+    width: 66.25px;
+    margin-right: 25px;
+    color: white;
+    position: absolute;
+    top: 35px;
+    left: 10px;
+}
+
+.user-item li a:hover {
+    color: #ffe276;
+}
+
+.user-item .user1 {
+    background: url(../img/images/賣東西.png) no-repeat;
+}
+
+.user-item .user2 {
+    background: url(../img/images/我的拍賣.jpg) no-repeat;
+}
+
+.user-item .user3 {
+    background: url(../img/images/露露通.png) no-repeat;
+    background-position-x: 1em;
+}
+
+.user-item .user4 {
+    background: url(../img/images/購物車.png) no-repeat;
+    background-position-x: 1em;
+}
+
+
+/* E 用戶列表 */
+
+
+/* E header橘色部分 *
+
+/* S 上方導航 */
+
+.top-banner {
+    width: 1250px;
+    height: 27px;
+    margin: 0 auto;
+    margin-top: 25px;
+    border: 3px solid #f89900;
+    border-color: transparent transparent #f89900 transparent;
+}
+
+.top-banner .ad-bar {
+    width: 230px;
+    height: 27px;
+    background: url(../img/images/廣告.jpg);
+    float: right;
+}
+
+.top-banner p {
+    display: inline-block;
+    width: 104px;
+    line-height: 27px;
+    margin-left: 10px;
+    float: left;
+    font-size: 16px;
+    color: #ff9803;
+    background: url(../img/images/播放.jpg) no-repeat;
+    background-position-x: 80px;
+}
+
+.top-banner .promo-bar li {
+    width: 80px;
+    height: 27px;
+    line-height: 30px;
+    margin-right: 9px;
+    float: left;
+    text-align: center;
+}
+
+.promo-bar .p1 {
+    background-color: #8176ff;
+}
+
+.promo-bar .p2 {
+    background-color: #00c6ab;
+}
+
+.promo-bar .p3 {
+    background-color: #59ba00;
+}
+
+.promo-bar .p4 {
+    background-color: #e645ff;
+}
+
+.promo-bar .p5 {
+    background-color: #f36902;
+}
+
+.promo-bar .p6 {
+    background-color: #eb3f7c;
+}
+
+.promo-bar .p7 {
+    background-color: #92b009;
+}
+
+.promo-bar .p8 {
+    background-color: #787878;
+}
+
+.promo-bar .p9 {
+    background-color: #3459bc;
+}
+
+.promo-bar .p0 {
+    background-color: #aa2229;
+}
+
+.promo-bar li a {
+    font-size: 15px;
+    color: white;
+}
+
+
+/* E 上方導航 */
+
+
+/* S 主要區域 */
+
+.main {
+    width: 1250px;
+    height: 2102px;
+    margin: 0 auto;
+}
+
+
+/* S 左側列表 */
+
+.main .left-banner {
+    width: 200px;
+    height: 1082px;
+    border: 1px solid #dddddd;
+    border-color: transparent #dddddd #dddddd #dddddd;
+}
+
+.left-banner .hot-area {
+    width: 200px;
+    height: 180px;
+}
+
+.left-banner .hot-area p {
+    display: inline-block;
+    width: 188px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #feeba1;
+    border: 1px solid #dddddd;
+    border-color: transparent transparent #dddddd transparent;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.left-banner .hot-area ul li {
+    height: 30px;
+    line-height: 30px;
+}
+
+.hot-area ul li a {
+    color: #868683;
+    font-size: 15px;
+    margin-left: 33px;
+}
+
+.hot-area ul li a span {
+    color: red;
+}
+
+.left-banner .class-menu p {
+    display: inline-block;
+    width: 188px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #feeba1;
+    border: 1px solid #dddddd;
+    border-color: #dddddd transparent #dddddd transparent;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.left-banner .class-menu ul {
+    width: 200px;
+    height: 678px;
+    border: 1px dashed #dddddd;
+    border-color: transparent transparent #dddddd transparent;
+}
+
+.class-menu ul li {
+    height: 28.25px;
+    line-height: 28.25px;
+}
+
+.class-menu ul li a {
+    color: #868683;
+    margin-left: 36px;
+}
+
+
+/* E 左側列表 */
+
+
+/* E 主要區域 */
