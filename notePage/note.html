@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        div,
+        span,
+        i {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: url(./img/bg.jpg) repeat;
+            font: 12px/20px '微軟正黑體';
+        }
+        
+        .wall {
+            width: 960px;
+            height: 627px;
+            background-color: white;
+            opacity: 0.7;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .tip {
+            width: 227px;
+            border: 1px solid black;
+            background-color: yellow;
+            padding-left: 10px;
+            position: absolute;
+            cursor: move;
+        }
+        
+        .tip .tip_h {
+            height: 68px;
+            position: relative;
+        }
+        
+        .tip .tip_h .head-msg {
+            padding-top: 40px;
+        }
+        
+        .tip .tip_h .closeBtn {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            cursor: pointer;
+        }
+        
+        .tip .tip_c {
+            height: 60px;
+        }
+        
+        .tip .tip_f {
+            height: 73px;
+            text-align: right;
+            line-height: 73px;
+            padding-right: 20px;
+            font-size: 14px;
+            color: saddlebrown;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wall" class="wall">
+        <!-- <div class="tip">
+            <div class="tip_h">
+                <div class="head-msg">
+                    第[xxx]則 2019-07-13 00:00:00
+                </div>
+                <i class="closeBtn">x</i>
+            </div>
+            <div class="tip_c">
+                BANG
+            </div>
+            <div class="tip_f">
+                阿明
+            </div>
+        </div> -->
+    </div>
+
+    <script>
+        var data = [{
+            "id": 1,
+            "name": "阿明",
+            "content": "安安",
+            "time": "2019-07-13 10:40:00"
+        }, {
+            "id": 2,
+            "name": "小美",
+            "content": "ㄎㄅ",
+            "time": "2019-07-13 10:50:00"
+        }, {
+            "id": 3,
+            "name": "腎結石",
+            "content": "BANG",
+            "time": "2019-07-13 10:53:00"
+        }, {
+            "id": 4,
+            "name": "浩浩",
+            "content": "ㄅㄅ",
+            "time": "2019-07-13 10:54:00"
+        }, ];
+
+        (function() {
+            // 頁面加載完成後 加載數據生成tip div並添加到wall上
+            var maxZIndex = 1;
+            var tipArray = []; //放所有的tip標籤
+            var isMove = false;
+            var tempx = 0;
+            var tempy = 0;
+            var moveNode = null; //移動的tip
+            window.onload = function() {
+                loadTipDivs(data);
+
+                /* 給所有tip綁定mouseedown事件 點擊時zindex最大 */
+                for (var i = 0; i < tipArray.length; i++) {
+                    tipArray[i].onmousedown = function(e) {
+                        maxZIndex += 1;
+                        this.style.zIndex = maxZIndex;
+
+                        /* 紀錄滑鼠點擊位置 以及要進行設置移動的標誌位 */
+                        isMove = true;
+                        e = e || window.event;
+                        tempx = e.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft);
+                        tempy = e.clientY + (document.documentElement.scrollTop || document.body.scrollTop);
+                        moveNode = this;
+                    };
+
+                    tipArray[i].onmouseup = function(e) {
+                        isMove = false;
+                    };
+                    /* 移動 */
+                    tipArray[i].onmousemove = function(e) {
+                        var pageX = e.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft);
+                        var pageY = e.clientY + (document.documentElement.scrollTop || document.body.scrollTop);
+                        var w = pageX - tempx;
+                        var h = pageY - tempy;
+                        if (isMove && this == moveNode) {
+                            this.style.left = parseFloat(this.style.left) + w + 'px';
+                            this.style.top = parseFloat(this.style.top) + h + 'px';
+                        }
+                        tempx = pageX;
+                        tempy = pageY;
+                    };
+                }
+
+                /* 關閉按鈕 */
+                var closeBtns = document.getElementsByTagName('i');
+                for (var j = 0; j < closeBtns.length; j++) {
+                    closeBtns[j].onclick = function() {
+                        this.parentNode.parentNode.style.display = 'none';
+                    };
+                }
+            };
+
+            function loadTipDivs(data) {
+                var strHTMLArray = [];
+                for (var i = 0; i < data.length; i++) {
+                    var itemData = data[i];
+                    var strHTML = "";
+                    strHTML += '<div class="tip">';
+                    strHTML += '    <div class="tip_h">';
+                    strHTML += '        <div class="head-msg">第[' + itemData.id + ']則' + itemData.time + '</div>';
+                    strHTML += '        <i class="closeBtn">x</i>';
+                    strHTML += '    </div>';
+                    strHTML += '    <div class="tip_c">' + itemData.content + '</div>';
+                    strHTML += '    <div class="tip_f">' + itemData.name + '</div>';
+                    strHTML += '</div>';
+                    strHTMLArray.push(strHTML);
+                }
+                var wall = document.getElementById('wall');
+                wall.innerHTML += strHTMLArray.join('');
+
+                /* 隨機給left top值 */
+                for (var i = 0; i < wall.childNodes.length; i++) {
+                    if (wall.childNodes[i].nodeType == 1) {
+                        wall.childNodes[i].style.left = Math.random() * (960 - 227) + 'px';
+                        wall.childNodes[i].style.top = Math.random() * (627 - 221) + 'px';
+                        tipArray.push(wall.childNodes[i]);
+                    }
+                }
+            }
+        })();
+
+        // <div class="tip">
+        //     <div class="tip_h">
+        //         <div class="head-msg">
+        //             第[xxx]則 2019-07-13 00:00:00
+        //         </div>
+        //         <i class="closeBtn">x</i>
+        //     </div>
+        //     <div class="tip_c">
+        //         BANG
+        //     </div>
+        //     <div class="tip_f">
+        //         阿明
+        //     </div>
+        // </div>
+    </script>
+</body>
+
+</html>
