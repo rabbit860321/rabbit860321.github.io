@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>露天拍賣-台灣 NO.1 拍賣網站</title>
-
+    <script src="lib/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
@@ -138,6 +138,24 @@
 
             </div>
         </div>
+        <div class="center-content">
+            <div class="tab-wrap">
+                <ul class="tab-hd">
+                    <li class="tab-hd-item">不插電擺放</li>
+                    <li class="tab-hd-item">夏食爽吃75折</li>
+                    <li class="tab-hd-item">夏季購物節</li>
+                    <li class="tab-hd-item">switch lite</li>
+                    <li class="tab-hd-item">499折50</li>
+                </ul>
+                <ul class="tab-bd">
+                    <li class="tab-bd-item on"><img src="img/img1.jpg" alt=""></li>
+                    <li class="tab-bd-item"><img src="img/img2.jpg" alt=""></li>
+                    <li class="tab-bd-item"><img src="img/img3.jpg" alt=""></li>
+                    <li class="tab-bd-item"><img src="img/img4.jpg" alt=""></li>
+                    <li class="tab-bd-item"><img src="img/img5.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <!-- E 網站主要列表區域 -->
 
@@ -146,6 +164,16 @@
 
     </div>
     <!-- E 網站底部列表區域 -->
+    <script>
+        $(function() {
+            $('.tab-hd-item').on('mouseenter', function() {
+                /* 拿到當前滑鼠移入li的索引 */
+                var index = $('.tab-hd-item').index(this);
+                var bdLiDom = $('.tab-bd-item').get(index);
+                $(bdLiDom).addClass('on').siblings().removeClass('on');
+            });
+        });
+    </script>
 </body>
 
 </html>
