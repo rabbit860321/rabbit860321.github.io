@@ -11,6 +11,7 @@ body {
 /* S header白色部分 */
 
 .header .w-header {
+    min-width: 1250px;
     height: 35px;
     background-color: #eeeeee;
 }
@@ -61,6 +62,7 @@ body {
 /* S header橘色部分 */
 
 .header .o-header {
+    min-width: 1250px;
     height: 101px;
     background-color: #f19200;
 }
@@ -415,6 +417,7 @@ body {
     color: #818181;
     text-align: center;
     line-height: 27px;
+    cursor: default;
 }
 
 .tab-wrap .tab-hd .tab-hd-item:hover {
