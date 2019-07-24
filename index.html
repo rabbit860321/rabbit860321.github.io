@@ -149,7 +149,7 @@
                     </tr>
                     <tr>
                         <td class="g">通訊地址</td>
-                        <td>高雄市大寮區大勇街84號</td>
+                        <td colspan="3">高雄市大寮區大勇街84號</td>
                     </tr>
                 </table>
             </div>
@@ -198,6 +198,19 @@
                         <td>git\github</td>
                         <td>了解基本指令使用</td>
                     </tr>
+                    <tr>
+                        <td class="g" rowspan="2">證照</td>
+                        <td colspan="2"><a id="License1" target="_blank">Adobe Certified Dreamweaver Developer</a></td>
+                        <div id="dlg3" class="easyui-dialog" closed=true title="Adobe Certified Dreamweaver Developer" data-options="iconCls:'icon-ok'" style="width:850px;height:615px;padding:10px">
+                            <img src="./img/Adobe dreamweaver.JPG" alt="">
+                        </div>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a id="License2" target="_blank">電腦硬體裝修乙級技術士</a></td>
+                        <div id="dlg4" class="easyui-dialog" closed=true title="電腦硬體裝修乙級技術士" data-options="iconCls:'icon-ok'" style="width:550px;height:757px;padding:10px">
+                            <img src="./img/硬體裝修乙丙級.JPG" alt="">
+                        </div>
+                    </tr>
                 </table>
             </div>
             <div class="autobiography" title="自傳" style="padding:20px">
@@ -231,6 +244,12 @@
             });
             $('#school1').on('click', function() {
                 $('#dlg1').dialog('open');
+            });
+            $('#License1').on('click', function() {
+                $('#dlg3').dialog('open');
+            });
+            $('#License2').on('click', function() {
+                $('#dlg4').dialog('open');
             });
         });
     </script>
