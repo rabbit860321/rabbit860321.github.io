@@ -97,6 +97,16 @@
         .easyui-progressbar {
             margin: 0 auto;
         }
+        
+        .autobiography div {
+            width: 800px;
+            border: 1px solid gray;
+            padding: 10px;
+        }
+        
+        .autobiography div p {
+            font-size: 15px;
+        }
     </style>
 </head>
 
@@ -111,13 +121,13 @@
                 <hr>
                 <i class="glyphicon glyphicon-phone"> 0955295541&nbsp;&nbsp;&nbsp;</i>
                 <i class="glyphicon glyphicon-envelope"> rabbit860321@gmail.com</i><br>
-                <a class="easyui-linkbutton" href="https://github.com/rabbit860321">Github</a>
-                <a class="easyui-linkbutton" href="https://www.facebook.com/rabbit860321">Facebook</a>
+                <a class="easyui-linkbutton" href="https://github.com/rabbit860321" target="_blank">Github</a>
+                <a class="easyui-linkbutton" href="https://www.facebook.com/rabbit860321" target="_blank">Facebook</a>
             </div>
         </div>
         <div id="p" class="easyui-progressbar" style="width:400px;"></div>
         <div class="easyui-tabs">
-            <div title="基本資料" style="padding:20px">
+            <div title="基本資料" style="padding:20px" id="nav1">
                 <table class="tb1">
                     <tr>
                         <td class="g">姓名</td>
@@ -147,13 +157,13 @@
                 <table>
                     <tr>
                         <td rowspan="2" class="g">學歷</td>
-                        <td><a id="school1">高雄科技大學資訊工程系<br>(2017/09~2019/06)</a></td>
+                        <td><a id="school1" target="_blank">高雄科技大學資訊工程系<br>(2017/09~2019/06)</a></td>
                         <div id="dlg1" class="easyui-dialog" closed=true title="高雄科技大學資訊工程系" data-options="iconCls:'icon-ok'" style="width:550px;height:757px;padding:10px">
-                            <img src="./img/畢業證書.JPG" alt="">
+                            <img src="./img/高科畢業證書.png" alt="">
                         </div>
                     </tr>
                     <tr>
-                        <td><a id="school2">和春技術學院資訊工程系<br>(2012/09~2017/06)</a></td>
+                        <td><a id="school2" target="_blank">和春技術學院資訊工程系<br>(2012/09~2017/06)</a></td>
                         <div id="dlg2" class="easyui-dialog" closed=true title="和春技術學院資訊工程系" data-options="iconCls:'icon-ok'" style="width:550px;height:757px;padding:10px">
                             <img src="./img/畢業證書.JPG" alt="">
                         </div>
@@ -164,30 +174,40 @@
                     </tr>
                 </table>
             </div>
-            <div title="技能專長&證照" style="padding:10px">
+            <div title="技能專長&證照" style="padding:20px">
                 <table>
                     <tr>
                         <td class="g" rowspan="4">擅長工具</td>
                         <td>JAVA</td>
-
+                        <td>熟悉基礎語法，以下是我在學期間用AndroidStudio開發的小專案<br>
+                            <a href="https://github.com/rabbit860321/Simple_Accounting_App" target="_blank">簡易記帳APP</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>HTML+CSS</td>
                         <td>HTML建立網頁基礎架構並加上CSS樣式 以下是我學習時做的練習<br>
-                            <a href="https://rabbit860321.github.io/rutenDemo/">露天首頁練習</a><br>
-                            <a href="https://rabbit860321.github.io/yahooDemo/">Yahoo首頁練習</a>
+                            <a href="https://rabbit860321.github.io/rutenDemo/" target="_blank">露天首頁練習</a><br>
+                            <a href="https://rabbit860321.github.io/yahooDemo/" target="_blank">Yahoo首頁練習</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>JavaScript</td>
+                        <td>JavaScript、Jquery</td>
+                        <td>熟習JavaScript基礎語法，此履歷網頁有用上較簡易的Jquery的第三方套件，JqueryUI、JqueryeasyUI</td>
                     </tr>
                     <tr>
-                        <td>Jquery</td>
+                        <td>git\github</td>
+                        <td>了解基本指令使用</td>
                     </tr>
                 </table>
             </div>
-            <div title="自傳" style="padding:10px">
-                111
+            <div class="autobiography" title="自傳" style="padding:20px">
+                <div>
+                    <p>我從小在高雄長大，父親從事金屬加工業，母親從事鋁門窗加工業，從小父母親為了工作都很忙，讓我有獨立自主的個性，不依賴別人，自己的事情自己處理。
+                        <br><br>國小在大寮國小就讀，國小成績不錯，國中在大寮國中進了加強班，國中畢業時選擇了免試升學，進到了和春技術學院五專部，選擇了資訊工程系就讀，在這裡學的領域有很多，硬體方面學到了電腦的拆裝與裝修，考到了硬體裝修乙級證照，也有學到一些機械製圖方面，AutoCad、Catia，也學到程式語言的基礎概念，畢業專題用Unity做了一個小遊戲在電腦端運行，運用Arduino單晶片微控制器接上藍芽模組模擬此遊戲的搖桿與之互動。
+                        <br><br>五專畢業後，非常幸運的轉學到了高雄科技大學就讀資訊工程系三年級，在這裡其實壓力蠻大的，與同學十分不熟悉，補學分也補得很辛苦，剛轉進來就開始準備專題，運用在五專學的東西，做了物聯網之運用-LINE BOT控制家電的小專題，三年級過完的暑假到了之前和春教授自己創業的公司實習，公司主要是在販售POS機為主，我的工作內容主要是安裝POS系統、協助出貨、與處理售後問題，在公司學到一些職場禮儀與與同事間的相處，也學到該如何面對客戶。四下軟體工程課上學到的如何用Git與同學協作一個小專案，當時做了一個簡易記帳APP。
+                        <br><br>在五專有加入過熱音社，讓我有聽音樂的興趣，也稍微會彈吉他，喜歡聽一些非主流音樂，很喜歡樂團現場演奏的氣氛，參加過一些獨立音樂祭，參加過5次的高雄大港開唱、5次的嘉義覺醒音樂祭。
+                    </p>
+                </div>
             </div>
         </div>
     </div>
