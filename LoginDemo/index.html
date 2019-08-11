@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Login</title>
     <script src="../lib/jquery-3.4.1.min.js"></script>
     <style>
         html,
@@ -118,7 +118,7 @@
 </head>
 
 <body>
-    <form action="index.html" class="login-form">
+    <form action="../index.html" class="login-form">
         <h1>Login</h1>
 
         <div class="txtb">
@@ -147,8 +147,14 @@
                     $(this).removeClass('focus');
                 }
             });
+            $('.logbtn').on('click', function(e) {
+                if (($('input[type="text"]').val() && $('input[type="password"]').val() != '123')) {
+                    e.preventDefault();
+                    alert('登入失敗');
+                }
+            });
         });
     </script>
 </body>
 
-</html>
+</html> ㄙ
