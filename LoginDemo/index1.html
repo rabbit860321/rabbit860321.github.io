@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <style>
+        html,
+        body,
+        form,
+        h1,
+        div,
+        input,
+        span,
+        a {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            /* box-sizing: border-box;，這個元素的內距和邊框將不會增加元素本身的寬度 */
+        }
+        
+        body {
+            min-height: 100vh;
+            background-image: linear-gradient(120deg, #3498db, #8e44ad);
+        }
+        
+        .login-form {
+            width: 360px;
+            background: #f1f1f1;
+            border-radius: 10px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        @media (max-width: 767px) {}
+        
+        @media (max-width: 480px) {}
+        
+        @media (min-width: 768px) and (max-width: 979px) {}
+        
+        @media (min-width: 980px) {}
+        
+        @media (min-width: 1200px) {}
+    </style>
+</head>
+
+<body>
+    <form action="../index.html" class="login-form">
+        <h1>Login</h1>
+
+        <div class="txtb">
+            <input type="text">
+            <span data-placeholder="Username"></span>
+        </div>
+
+        <div class="txtb">
+            <input type="password">
+            <span data-placeholder="Password"></span>
+        </div>
+
+        <input type="submit" class="logbtn" value="登入">
+
+        <div class="bottom-text">
+            <a href="#">註冊</a>
+        </div>
+    </form>
+</body>
+
+</html>

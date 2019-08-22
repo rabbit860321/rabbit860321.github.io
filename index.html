@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>楊耀仁 YaoRenYang - 個人履歷網站</title>
-    <script src="lib/jquery-3.4.1.min.js"></script>
-    <script src="lib/jquery-easyui/jquery.easyui.min.js"></script>
     <link rel="stylesheet" href="lib/jquery-easyui/themes/icon.css">
     <link rel="stylesheet" href="lib/jquery-easyui/themes/gray/easyui.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -23,7 +21,12 @@
         }
         
         body {
+            min-width: 100vh;
             background-image: linear-gradient(120deg, #3498db, #8e44ad);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
         }
         
         table,
@@ -225,7 +228,8 @@
             </div>
         </div>
     </div>
-
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <script src="lib/jquery-easyui/jquery.easyui.min.js"></script>
     <script>
         $(function() {
             var value = $('#p').progressbar('getValue');
